@@ -1,7 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import auth from '../../Firebase/firebase.init';
 import logo from '../../images/logo.png'
 
@@ -16,10 +16,10 @@ const Header = () => {
                     <span className=" text-xl text-white uppercase font-bold">Core Realtor</span>
                 </Link>
                 <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-                    <Link to="/" className="mr-5 hover:text-brown-400">Home</Link>
-                    <Link to="/" className="mr-5 hover:text-blue-400">Services</Link>
-                    <Link to="/about" className="mr-5 hover:text-blue-400">About</Link>
-                    <Link to="/blog" className="mr-5 hover:text-blue-400">Blog</Link>
+                    <NavLink to="/" className={({isActive})=> isActive ? "mr-5 hover:text-neutral-400 text-neutral-400" : "text-white mr-5 hover:text-neutral-400"}>Home</NavLink>
+                    <NavLink to="#home/services" className="text-white mr-5 hover:text-neutral-400">Services</NavLink>
+                    <NavLink to="/about" className={({isActive})=> isActive ? "mr-5 hover:text-neutral-400 text-neutral-400" : "text-white mr-5 hover:text-neutral-400"}>About</NavLink>
+                    <NavLink to="/blogs" className={({isActive})=> isActive ? "mr-5 hover:text-neutral-400 text-neutral-400" : "text-white mr-5 hover:text-neutral-400"}>Blog</NavLink>
 
                 </nav>
                 {user?.uid ?

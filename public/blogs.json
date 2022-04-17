@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "question": "1. Difference between authorization and authentication?",
+         "category": "Authentication",
+         "comments":2354,
+        "viwers": 3025,
+        "img": "./images/blog-image-1.jpg",
+        "answer": "I will either take pictures of your house yourself or pay a professional photographer to do it for them. I know exactly what to feature in the images to get potential buyers in the door."
+        
+      },
+      {
+        "id": 1,
+        "question": "2. Why are you using firebase? What other options do you have to implement authentication?",
+         "category": "Firebase",
+         "comments":876,
+        "viwers": 1025,
+        "img": "./images/blog-image-2.jpg",
+        "answer": "I will either take pictures of your house yourself or pay a professional photographer to do it for them. I know exactly what to feature in the images to get potential buyers in the door."
+        
+      },
+      {
+        "id": 1,
+        "question": "3. What other services does firebase provide other than authentication?",
+         "category": "Firebase",
+         "comments":345,
+        "viwers": 1425,
+        "img": "./images/blog-image-3.jpg",
+        "answer": "I will either take pictures of your house yourself or pay a professional photographer to do it for them. I know exactly what to feature in the images to get potential buyers in the door."
+        
+      }
+]

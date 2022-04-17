@@ -5,7 +5,8 @@ import { toast } from 'react-toastify';
 import auth from '../../Firebase/firebase.init';
 import Image from './Login/Login.png';
 import { BsEyeSlash } from "@react-icons/all-files/bs/BsEyeSlash";
-import { TiDeleteOutline } from "@react-icons/all-files/ti/TiDeleteOutline"
+import { TiDeleteOutline } from "@react-icons/all-files/ti/TiDeleteOutline";
+import GoogleLogo from '../../images/google.svg'
 
 const Login = () => {
     const [userInfo, setUserInfo] = useState({
@@ -69,7 +70,7 @@ const Login = () => {
             navigate(from);
         }
     }, [user]);
-    
+
     return (
         <section className="text-gray-600 body-font">
             <div className="container mx-auto flex px-36 py-24 md:flex-row flex-col items-center">
@@ -102,6 +103,12 @@ const Login = () => {
                             <label for="terms" className="font-medium text-gray-900 dark:text-gray-300 ml-2"><a href="#" className="text-blue-900 hover:underline dark:text-teal-600">Forget Password?</a></label>
                             <button type="submit" className="text-white ml-40 bg-blue-900 hover:bg-teal-700 focus:ring-4 focus:outline-none focus:ring-teal-300 font-bold uppercase rounded-lg text-sm px-3 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">Login</button>
                         </div>
+                        <div className='flex font-bold items-center my-3'>
+                                <hr className='border-blue-900 h-px w-full mr-2 mt-1' />
+                                <span>or</span>
+                                <hr className='border-blue-900 h-px w-full ml-2 mt-1'/>
+                            </div>
+                            <button onClick={() => signInWithGoogle()} className="flex items-center justify-center shadow-md bg-gray-50 border font-bold border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-900 focus:border-blue-900 w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-900 dark:focus:border-blue-900 dark:shadow-md-light"> <img className='w-6 pr-2' src={GoogleLogo} alt='' /> Continue with Google</button>
                     </form>
                 </div>
                 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-1/2 mb-10 md:mb-0">

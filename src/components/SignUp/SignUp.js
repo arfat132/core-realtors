@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import Image from './SignUp.png';
 import auth from '../../Firebase/firebase.init';
 import { toast, ToastContainer } from 'react-toastify';
 import { BsEyeSlash } from "@react-icons/all-files/bs/BsEyeSlash";
 import { TiDeleteOutline } from "@react-icons/all-files/ti/TiDeleteOutline"
+import GoogleLogo from '../../images/google.svg'
 
 const SignUp = () => {
     const [userInfo, setUserInfo] = useState({
@@ -22,6 +23,7 @@ const SignUp = () => {
     const [showPass, setShowPass] = useState(false);
     const [createUserWithEmailAndPassword, user, loading, hookError] =
         useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+        const [signInWithGoogle, googleUser, googleloading, googleError] = useSignInWithGoogle(auth);
 
     const handleEmail = (event) => {
         if (/\S+@\S+\.\S+/.test(event.target.value)) {
@@ -92,12 +94,12 @@ const SignUp = () => {
                                 <Link to="/signup" className='text-blue-900 uppercase text-xl font-bold ml-40'>SignUp</Link>
                             </div>
                             <div className="mb-6">
-                                <label htmlFor="email" className="block mb-2 text-sm ml-4 font-medium text-gray-900 dark:text-gray-300">Your Email</label>
+                                <label htmlFor="email" className="block mb-2 text-sm ml-4 font-medium text-gray-900">Your Email</label>
                                 <input
                                     onBlur={handleEmail}
                                     type="email"
                                     id="email"
-                                    className="shadow-md bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500 dark:shadow-md-light"
+                                    className="shadow-md bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-900 focus:border-blue-900 block w-full p-2.5"
                                     placeholder="Enter Your Email"
                                     required="" />
                                 {errors?.email && <p className="flex items-center text-red-500 mt-4 ml-4 font-bold"><TiDeleteOutline className='mr-2 text-xl mt-1'> </TiDeleteOutline> {errors.email}</p>}
@@ -108,33 +110,39 @@ const SignUp = () => {
                                     onBlur={handlePassword}
                                     type={showPass ? "text" : "password"}
                                     id="password"
-                                    className="shadow-md bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500 dark:shadow-md-light"
+                                    className="shadow-md bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-900 focus:border-blue-900 block w-full p-2.5   "
                                     placeholder="Enter Your Password"
                                     required="" />
                                 {errors?.password && <p className="flex text-red-500 mt-4 ml-4 font-bold"><TiDeleteOutline className='mr-2 text-2xl'> </TiDeleteOutline> {errors.password}</p>}
                                 <p className="absolute top-10 right-5 cursor-pointer" onClick={() => setShowPass(!showPass)}><BsEyeSlash /></p>
                             </div>
                             <div className="mb-6">
-                                <label htmlFor="password" className="block mb-2 text-sm ml-4 font-medium text-gray-900 dark:text-gray-300" >Confirm Password</label>
+                                <label htmlFor="password" className="block mb-2 text-sm ml-4 font-medium text-gray-900" >Confirm Password</label>
                                 <input
                                     onBlur={handleConfirmPassword}
                                     type='password'
                                     id="confirmPassword"
-                                    className="shadow-md bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-teal-500 focus:border-teal-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-teal-500 dark:focus:border-teal-500 dark:shadow-md-light" placeholder="Confirm Password" required="" />
+                                    className="shadow-md bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-900 focus:border-blue-900 block w-full p-2.5 " placeholder="Confirm Password" required="" />
                                 {errors?.confirmPassword && <p className="flex items-center text-red-500 mt-4 ml-4 font-bold"><TiDeleteOutline className='mr-2 text-xl mt-1'> </TiDeleteOutline> {errors.confirmPassword}</p>}
                             </div>
                             <div className="flex items-start mb-6">
                                 <div className="flex items-center h-5">
-                                    <input id="terms" aria-describedby="terms" type="checkbox" className="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-teal-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-teal-600 dark:ring-offset-gray-800" required="" />
+                                    <input id="terms" aria-describedby="terms" type="checkbox" className="w-4 h-4 bg-gray-50 rounded border border-gray-300 focus:ring-3 focus:ring-blue-900 " required="" />
                                 </div>
                                 <div className="ml-3 text-sm">
-                                    <label htmlFor="terms" className="font-medium text-gray-900 dark:text-gray-300">I agree with the <Link to="" className="text-blue-900 hover:underline dark:text-teal-600">terms and conditions</Link></label>
+                                    <label htmlFor="terms" className="font-medium text-gray-900">I agree with the <Link to="" className="text-blue-900 hover:underline">terms and conditions</Link></label>
                                 </div>
                             </div>
                             <div className="flex items-center mb-6">
-                                <label htmlFor="terms" className="font-medium text-gray-900 dark:text-gray-300 ml-2"><Link to="" className="text-blue-900 hover:underline dark:text-teal-600">Forget Password?</Link></label>
-                                <button type="submit" className="text-white ml-40 bg-blue-900 hover:bg-teal-700 focus:ring-4 focus:outline-none focus:ring-teal-300 font-bold uppercase rounded-lg text-sm px-4 py-2.5 text-center dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800">Sign Up</button>
+                                <label htmlFor="terms" className="font-medium text-gray-900 ml-2"><Link to="" className="text-blue-900 hover:underline">Forget Password?</Link></label>
+                                <button type="submit" className="text-white ml-40 bg-blue-900 hover:ring-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-900 font-bold uppercase rounded-lg text-sm px-4 py-2.5 text-center">Sign Up</button>
                             </div>
+                            <div className='flex font-bold items-center my-3'>
+                                <hr className='border-blue-900 h-px w-full mr-2 mt-1' />
+                                <span>or</span>
+                                <hr className='border-blue-900 h-px w-full ml-2 mt-1'/>
+                            </div>
+                            <button onClick={() => signInWithGoogle()} className="flex items-center justify-center shadow-md bg-gray-50 border font-bold border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-900 focus:border-blue-900 w-full p-2.5"> <img className='w-6 pr-2' src={GoogleLogo} alt='' /> Continue with Google</button>
                         </form>
                         <ToastContainer />
                     </div>
