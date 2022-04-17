@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "category": "breakfast",
+        "name": "Lists Your Home",
+         "price": 420,
+         "ratings": "★★★★★",
+        "ratingsCount": 3725,
+        "img": "./images/image-1.jpg",
+        "description": "I will take a look at similar homes in the area that are listed or have recently sold to compare to yours. I will also pull stats from the area, look at the property value of the neighbor's homes, and use all of this information to find the value of your home. "
+        
+      },
+      {
+        "id": 2,
+        "category": "breakfast",
+        "name": "Taking Pictures",
+         "price": 720,
+         "ratings": "★★★★",
+        "ratingsCount": 3025,
+        "img": "./images/image-2.jpg",
+        "description": "I will either take pictures of your house yourself or pay a professional photographer to do it for them. I know exactly what to feature in the images to get potential buyers in the door."
+        
+      },
+      {
+        "id": 3,
+        "category": "breakfast",
+        "name": "Listing on the MLS",
+         "price": 1020,
+         "ratings": "★★★★★",
+        "ratingsCount": 1705,
+        "img": "./images/image-3.jpg",
+        "description": "Once I geared with an attractive price and incredible photos, I am ready to list your home on the MLS. Simply listing your house with beautiful photos and a price isn't enough, however. Next, I'll probably ask you a few questions about the house to write a sensational explanation."
+        
+      }
+]
