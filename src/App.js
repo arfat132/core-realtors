@@ -3,7 +3,7 @@ import { Routes, Route} from "react-router-dom";
 import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import About from './components/About/About';
-import NotFound from './components/Home/NotFound/NotFound';
+import NotFound from './components/NotFound/NotFound';
 import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
 import Checkout from './components/Checkout/Checkout';
@@ -17,7 +17,7 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home#services" element={<Services />} />
+        <Route path="/" element={<Services />} />
         <Route path="/checkout" element={
         <RequireAuth>
         <Checkout />

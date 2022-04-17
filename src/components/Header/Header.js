@@ -17,7 +17,7 @@ const Header = () => {
                 </Link>
                 <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
                     <NavLink to="/" className={({isActive})=> isActive ? "mr-5 hover:text-neutral-400 text-neutral-400" : "text-white mr-5 hover:text-neutral-400"}>Home</NavLink>
-                    <NavLink to="#home/services" className="text-white mr-5 hover:text-neutral-400">Services</NavLink>
+                    <NavLink to="/" className="text-white mr-5 hover:text-neutral-400">Services</NavLink>
                     <NavLink to="/about" className={({isActive})=> isActive ? "mr-5 hover:text-neutral-400 text-neutral-400" : "text-white mr-5 hover:text-neutral-400"}>About</NavLink>
                     <NavLink to="/blogs" className={({isActive})=> isActive ? "mr-5 hover:text-neutral-400 text-neutral-400" : "text-white mr-5 hover:text-neutral-400"}>Blog</NavLink>
 

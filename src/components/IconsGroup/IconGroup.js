@@ -7,7 +7,7 @@ import { GiGreenhouse } from "@react-icons/all-files/gi/GiGreenhouse";
 import { GiLighthouse } from "@react-icons/all-files/gi/GiLighthouse";
 const IconGroup = () => {
     return (
-        <div className='mt-72 text-center font-bold -mb-10 flex px-36 justify-between text-blue-900' >
+        <div className='mt-96 text-center font-bold -mb-10 px-36 justify-between text-blue-900 flex flex-wrap' >
             <div className=''>
                 <BsFillHouseFill className='text-9xl mb-2'> </BsFillHouseFill>
                 <h3>Single House</h3>

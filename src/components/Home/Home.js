@@ -9,9 +9,9 @@ const Home = () => {
         <div>
             <div className='home-banner z-0'>
                 <img className='absoulate w-100' src={Banner} alt="" />
-                <div className='w-1/2 relative mb-6 text-white ml-20 z-0'>
-                <h1 className='text-3xl text-white font-bold mb-6'>Best Way To Find Your Dream House</h1>
-                <p className=''>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quaerat libero placeat pariatur accusantium molestias reiciendis, necessitatibus voluptatem, veritatis quam explicabo quae exercitationem itaque error recusandae ducimus iure optio soluta iste ab. Consectetur deserunt vero modi doloribus optio quo perspiciatis illum vitae eligendi eum porro necessitatibus, odit, facere placeat aut!</p>
+                <div className='sm:px-4 lg:px-40 relative sm:mb-1 lg:mb-6 text-white sm:ml-0 lg:ml-20 z-0 text-center'>
+                <h1 className='sm:text-xs lg:text-5xl text-white font-bold sm:mb-1 lg:mb-6'>Best Way To Find Your Dream House</h1>
+                <p className='sm:text-sm '>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quaerat libero placeat pariatur accusantium molestias reiciendis, necessitatibus voluptatem, veritatis quam explicabo quae exercitationem itaque error recusandae ducimus iure optio soluta iste ab. Consectetur deserunt vero modi doloribus optio quo perspiciatis illum vitae eligendi eum porro necessitatibus, odit, facere placeat aut!</p>
                </div>
             </div>
             <IconGroup></IconGroup>

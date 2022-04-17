@@ -12,7 +12,7 @@ const Services = () => {
     return (
         <section id='#services' className="text-gray-600 body-font">
             <div className="container px-5 pb-24 mx-auto">
-                <h1 className='text-center text-blue-900 uppercase text-3xl font-bold my-8'>Services</h1>
+                <h1 className='text-center text-blue-900 uppercase text-3xl font-bold my-8'>My Services <div className='w-24 h-1 bg-blue-900 rounded-lg mx-auto mt-2'></div></h1>
                 <div className="flex flex-wrap -m-4">
                    
                     {
