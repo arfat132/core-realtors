@@ -10,7 +10,7 @@ const About = () => {
                 </div>
                 <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
                     <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold text-blue-900 uppercase">About me</h1>
-                    <p className="mb-8 leading-relaxed">A full-service realtor does everything from listing your house on the MLS for the right price to marketing your house and completing negotiations. They're known as full-service because they don't just pick and choose which services to provide, they offer the whole package.</p>
+                    <p className="mb-8 leading-relaxed">Everyone needs to have work goals to push themselves further and have an actionable career roadmap charted out.I have a plan to Learn a new programming language within six months and write at least three full-featured programs using this language as well as finish an open-source project I started last year. The programming field is a broad and fast-evolving one. Aside from the regular norm of improving our programming skills and technical skills, there are many other things to achieve. So, setting a smart goal is beneficial for us as an individual and together as a team. </p>
                 </div>
             </div>
         </section>

@@ -6,7 +6,7 @@
          "comments":2354,
         "viewrs": 3025,
         "img": "./images/blog-image-1.jpg",
-        "answer": "I will either take pictures of your house yourself or pay a professional photographer to do it for them. I know exactly what to feature in the images to get potential buyers in the door."
+        "answer": "Authentication means validating our credentials like User Name/User ID and password to verify your identity.  On the other hand, authorization means access to the system which ultimately gives us full permission to access the resources such as information, files, databases, funds, locations, almost anything. Authentication and authorization are protected for access to a system.  Any attempt to access the system might be authenticated by entering valid credentials, but it can only be accepted after successful authorization. "
         
       },
       {

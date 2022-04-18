@@ -10,6 +10,7 @@ import { TiDeleteOutline } from "@react-icons/all-files/ti/TiDeleteOutline";
 import GoogleLogo from '../../images/google.svg';
 
 
+
 const Login = () => {
     const [userInfo, setUserInfo] = useState({
         email: "",
@@ -28,8 +29,8 @@ const Login = () => {
     const [sendPasswordResetEmail, sending, passwordResetError] = useSendPasswordResetEmail(
         auth
     )
-
-    const handleEmail = (event) => {
+    
+   const handleEmail = (event) => {
         if (/\S+@\S+\.\S+/.test(event.target.value)) {
             setUserInfo({ ...userInfo, email: event.target.value });
             setErrors({ ...errors, email: "" });
@@ -63,7 +64,7 @@ const Login = () => {
         signInWithEmail(userInfo.email, userInfo.password);
     };
     useEffect(() => {
-        const hookErrors = hookError || googleError;
+        const hookErrors = hookError || googleError || passwordResetError;
         if (hookErrors) {
             switch (hookErrors?.code) {
                 case "auth/user-not-found":
@@ -73,15 +74,15 @@ const Login = () => {
                     toast("Something went wrong");
             }
         }
-    }, [hookError, googleError]);
+    }, [hookError, googleError, passwordResetError]);
 
+  
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
-
     useEffect(() => {
         if (user) {
-            navigate(from);
+            navigate(from, { replace: true });
         }
     }, [user]);
 
@@ -96,26 +97,27 @@ const Login = () => {
                         <Link to="/signup" className='text-blue-900 uppercase text-xl font-bold ml-40'>SignUp</Link>
                         </div>
                         <div className="mb-6">
-                            <label for="email" className="block mb-2 text-sm ml-4 font-medium text-gray-900">Your email</label>
+                            <label htmlFor="email" className="block mb-2 text-sm ml-4 font-medium text-gray-900">Your email</label>
                             <input
                                 onBlur={handleEmail}
                                 type="email" id="email"
-                                className="shadow-md bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-900 focus:border-blue-900 block w-full p-2.5 " placeholder="name@flowbite.com" required="" />
+                                className="shadow-md bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-900 focus:border-blue-900 block w-full p-2.5 " placeholder="Enter Your Email" required="" />
                             {errors?.email && <p className="flex items-center text-red-500 mt-4 ml-4 font-bold"><TiDeleteOutline className='mr-2 text-xl mt-1'> </TiDeleteOutline> {errors.email}</p>}
                         </div>
                         <div className="mb-6 relative">
-                            <label for="password" className="block mb-2 text-sm ml-4 font-medium text-gray-900">Your password</label>
+                            <label htmlFor="password" className="block mb-2 text-sm ml-4 font-medium text-gray-900">Your password</label>
                             <input
                                 onBlur={handlePassword}
                                 type={showPass ? "text" : "password"}
                                 id="password"
-                                className="shadow-md bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-teal-500 focus:border-teal-500 block w-full  p-2.5 dark:bg-gray-700" required="" />
+                                className="shadow-md bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-3xl focus:ring-blue-500 focus:border-blue-500 block w-full  p-2.5"
+                                placeholder="Enter Your Password" required="" />
                             {errors?.password && <p className="flex text-red-500 mt-4 ml-4 font-bold"><TiDeleteOutline className='mr-2 text-2xl'> </TiDeleteOutline> {errors.password}</p>}
                                 <p className="absolute top-10 right-5 cursor-pointer" onClick={() => setShowPass(!showPass)}><BsEyeSlash /></p>
                         </div>
                         <div className="flex items-center  mb-6">
-                            <label for="terms" className="font-medium text-gray-900 dark:text-gray-300 ml-2"><button onClick={forgetPassword} className="text-blue-900 font-semibold hover:underline">Forget Password?</button></label>
-                            <button type="submit" className="text-white ml-40 bg-blue-900 hover:bg-teal-700 focus:ring-4 focus:outline-none focus:ring-teal-300 font-bold uppercase rounded-lg text-sm px-3 py-2.5 text-center">Login</button>
+                            <label htmlFor="terms" className="font-medium text-gray-900 dark:text-gray-300 ml-2"><button onClick={forgetPassword} className="text-blue-900 font-semibold hover:underline">Forget Password?</button></label>
+                            <button type="submit" className="text-white ml-40 bg-blue-900 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold uppercase rounded-lg text-sm px-3 py-2.5 text-center">Login</button>
                         </div>
                         <div className='flex font-bold items-center my-3'>
                                 <hr className='border-blue-900 h-px w-full mr-2 mt-1' />

@@ -10,9 +10,9 @@ const Blog = ({blog}) => {
                     <div className="p-6">
                     <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{category}</h2>
                         <h1 className="title-font text-lg font-bold text-gray-900 mb-3">{question}</h1>
-                        <p className="leading-relaxed mb-3">{answer}</p>
+                        <p className="leading-relaxed mb-3 text-justify">{answer}</p>
                         <div class="flex items-center flex-wrap ">
-              <Link to='' class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
+              <Link to='' className="text-white px-4 py-2 bg-blue-900 rounded-tr-3xl rounded-bl-3xl  font-extrabold inline-flex items-center md:mb-2 lg:mb-0">Learn More
                 <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M5 12h14"></path>
                   <path d="M12 5l7 7-7 7"></path>

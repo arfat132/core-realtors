@@ -10,75 +10,66 @@ const Footer = () => {
             <img src={logo} alt="" />
               <span className="relative -ml-2 text-2xl text-white">Core Realtor</span>
             </Link>
-            <p className="mt-2 text-sm text-gray-400">Air plant banjo lyft occupy retro adaptogen indego</p>
+            <p className="mt-2 text-sm text-gray-400">If you are curious about available houses or land in the New York City, you pick the right place to start.</p>
           </div>
           <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">About me</h2>
               <nav className="list-none mb-10">
                 <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">First Link</Link>
+                  <Link to="" className="text-gray-400 hover:text-gray-800">About</Link>
+                </li>
+                                <li>
+                  <Link to="" className="text-gray-400 hover:text-gray-800">Licensing</Link>
                 </li>
                 <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">Second Link</Link>
-                </li>
-                <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">Third Link</Link>
-                </li>
-                <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">Fourth Link</Link>
+                  <Link to="" className="text-gray-400 hover:text-gray-800">Contact</Link>
                 </li>
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">Follow me</h2>
               <nav className="list-none mb-10">
                 <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">First Link</Link>
+                  <Link to="" className="text-gray-400 hover:text-gray-800">Facebook</Link>
                 </li>
                 <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">Second Link</Link>
+                  <Link to="" className="text-gray-400 hover:text-gray-800">Github</Link>
                 </li>
                 <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">Third Link</Link>
+                  <Link to="" className="text-gray-400 hover:text-gray-800">Twitter</Link>
                 </li>
-                <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">Fourth Link</Link>
-                </li>
+                
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">Legal</h2>
               <nav className="list-none mb-10">
-                <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">First Link</Link>
+              <li>
+                  <Link to="" className="text-gray-400 hover:text-gray-800">Privacy Policy</Link>
                 </li>
                 <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">Second Link</Link>
+                  <Link to="" className="text-gray-400 hover:text-gray-800">Terms & Conditions</Link>
                 </li>
                 <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">Third Link</Link>
+                  <Link to="" className="text-gray-400 hover:text-gray-800">Resources</Link>
                 </li>
-                <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">Fourth Link</Link>
-                </li>
+              
               </nav>
             </div>
             <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+              <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">Contact</h2>
               <nav className="list-none mb-10">
                 <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">First Link</Link>
+                  <Link to="" className="text-gray-400 hover:text-gray-800">Phone: +14232551111</Link>
                 </li>
                 <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">Second Link</Link>
+                  <Link to="" className="text-gray-400 hover:text-gray-800">Email: core.realtor32@gmail.com</Link>
                 </li>
                 <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">Third Link</Link>
+                  <Link to="" className="text-gray-400 hover:text-gray-800">Address: New York City, USA</Link>
                 </li>
-                <li>
-                  <Link to="" className="text-gray-400 hover:text-gray-800">Fourth Link</Link>
-                </li>
+               
               </nav>
             </div>
           </div>
