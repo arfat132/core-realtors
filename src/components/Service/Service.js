@@ -13,7 +13,7 @@ const Service = ({ service }) => {
                         <h1 className="title-font text-lg font-bold text-gray-900 mb-3">{name}</h1>
                         <p className="leading-relaxed mb-3">{description}</p>
                         <div className="flex items-center flex-wrap ">
-                            <Link to='/checkout' className="text-blue-900 font-extrabold inline-flex items-center md:mb-2 lg:mb-0">Check Out
+                            <Link to='/checkout' className="text-white px-4 py-2 bg-blue-900 rounded-tr-3xl rounded-bl-3xl  font-extrabold inline-flex items-center md:mb-2 lg:mb-0">Check Out
                                 <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M5 12h14"></path>
                                     <path d="M12 5l7 7-7 7"></path>
