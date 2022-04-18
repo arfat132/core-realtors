@@ -23,7 +23,7 @@ const IconGroup = () => {
                 <GiLighthouse className='text-9xl mb-2'></GiLighthouse>
                 <h3>Light House</h3>
             </div>
-            
+
             <div className='bg-blue-100 py-8 px-12 mb-4 rounded-tr-3xl rounded-bl-3xl   q'>
                 <GiGreenhouse className='text-9xl mb-2 '></GiGreenhouse>
                 <h3>Green House</h3>

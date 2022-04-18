@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import Image from './SignUp.png';
 import auth from '../../Firebase/firebase.init';
@@ -103,8 +103,8 @@ const SignUp = () => {
                         < div className="lg:flex-grow md:w-1/2 lg:p-14 md:pl-16 mr-56 flex flex-col md:items-start md:text-left items-center text-center shadow-lg rounded-xl">
                             <form onSubmit={handleSignUp}>
                                 <div className='mb-6'>
-                                    <Link to="/login" className='text-blue-900 uppercase text-xl font-bold ml-10 mb-6'>Login</Link>
-                                    <Link to="/signup" className='text-blue-900 uppercase text-xl font-bold ml-40'>SignUp</Link>
+                                    <NavLink to="/login" className={({ isActive }) => isActive ? "text-blue-900 uppercase text-xl font-bold ml-40" : "text-neutral-300 uppercase text-xl font-bold ml-40"}>Login</NavLink>
+                                    <NavLink to="/signup" className={({ isActive }) => isActive ? "text-blue-900 uppercase text-xl font-bold ml-40" : "text-neutral-300 uppercase text-xl font-bold ml-40"}>SignUp</NavLink>
                                 </div>
                                 <div className="mb-6">
                                     <label htmlFor="email" className="block mb-2 text-sm ml-4 font-medium text-gray-900">Your Email</label>

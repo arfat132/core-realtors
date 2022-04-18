@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../Firebase/firebase.init';
@@ -93,8 +93,8 @@ const Login = () => {
                     
                     <form onSubmit={handleLogin} className='login'>
                         <div className='mb-6'>
-                        <Link to="/login" className='text-blue-900 uppercase text-xl font-bold ml-10'>Login</Link>
-                        <Link to="/signup" className='text-blue-900 uppercase text-xl font-bold ml-40'>SignUp</Link>
+                            <NavLink to="/login" className={({ isActive }) => isActive ? "text-blue-900 uppercase text-xl font-bold ml-40" : "text-neutral-300 uppercase text-xl font-bold ml-40"}>Login</NavLink>
+                        <NavLink to="/signup" className={({ isActive }) => isActive ? "text-blue-900 uppercase text-xl font-bold ml-40" : "text-neutral-300 uppercase text-xl font-bold ml-40"}>SignUp</NavLink>
                         </div>
                         <div className="mb-6">
                             <label htmlFor="email" className="block mb-2 text-sm ml-4 font-medium text-gray-900">Your email</label>

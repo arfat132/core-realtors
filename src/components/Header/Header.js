@@ -16,10 +16,10 @@ const Header = () => {
                     <span className=" text-xl text-white uppercase font-bold">Core Realtor</span>
                 </Link>
                 <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
-                    <NavLink to="/" className={({isActive})=> isActive ? "mr-5 hover:text-neutral-400 text-neutral-400" : "text-white mr-5 hover:text-neutral-400"}>Home</NavLink>
-                    <NavLink to="/" className="text-white mr-5 hover:text-neutral-400">Services</NavLink>
-                    <NavLink to="/about" className={({isActive})=> isActive ? "mr-5 hover:text-neutral-400 text-neutral-400" : "text-white mr-5 hover:text-neutral-400"}>About</NavLink>
-                    <NavLink to="/blogs" className={({isActive})=> isActive ? "mr-5 hover:text-neutral-400 text-neutral-400" : "text-white mr-5 hover:text-neutral-400"}>Blog</NavLink>
+                    <NavLink to="/" className={({isActive})=> isActive ? "mr-5 hover:text-neutral-300 text-neutral-300" : "text-white mr-5 hover:text-neutral-300"}>Home</NavLink>
+                    <NavLink to="/" className="text-white mr-5 hover:text-neutral-300">Services</NavLink>
+                    <NavLink to="/about" className={({isActive})=> isActive ? "mr-5 hover:text-neutral-300 text-neutral-300" : "text-white mr-5 hover:text-neutral-300"}>About</NavLink>
+                    <NavLink to="/blogs" className={({isActive})=> isActive ? "mr-5 hover:text-neutral-300 text-neutral-300" : "text-white mr-5 hover:text-neutral-300"}>Blog</NavLink>
 
                 </nav>
                 {user?.uid ?
