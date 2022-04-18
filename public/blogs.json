@@ -16,7 +16,7 @@
          "comments":876,
         "viewrs": 1025,
         "img": "./images/blog-image-2.jpg",
-        "answer": "I will either take pictures of your house yourself or pay a professional photographer to do it for them. I know exactly what to feature in the images to get potential buyers in the door."
+        "answer": "Firebase is simple, lightweight, friendly, industrially recognized and a perfect prototyping tool that offers many features that pitch it as the go-to backend development tool for web and mobile apps. It's pretty simple to connect and use built-in third-party authentication providers, including Google, Facebook, and Twitter, among others with firebase. There are many other options to implement authentication except firebase such as Parse, AWS AND so on."
         
       },
       {
@@ -26,7 +26,7 @@
          "comments":345,
         "viewrs": 1425,
         "img": "./images/blog-image-3.jpg",
-        "answer": "I will either take pictures of your house yourself or pay a professional photographer to do it for them. I know exactly what to feature in the images to get potential buyers in the door."
+        "answer": "Firebase is a Backend-as-a-Service which provides developers with a variety of tools and services to help them develop quality apps, grow their user base, and earn profit. It is built on Google’s infrastructure.There many services firebase provides us other than authentication. The most useful services are cloud firestore, cloud functions,hosting.cloud storage, google analytics, predictions and cloud messaging."
         
       }
 ]
